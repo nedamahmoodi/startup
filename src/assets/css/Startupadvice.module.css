@@ -1,0 +1,22 @@
+.startopadvice {
+    display: flex;
+    flex-direction: row;
+    margin-top: 80px;
+}
+.captionright2 {
+    margin-left: 60px;
+    align-items: center;
+    margin-top: 80px;
+}
+
+.captionright2 h2 {
+    color: #393950;
+    font-family: vije;
+    font-weight: bold;
+}
+
+.captionright2 p {
+    color: #5e5c5c;
+    font-family: VijeNeue-Light;
+    font-size: 1rem;
+}

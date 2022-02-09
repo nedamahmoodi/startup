@@ -1,0 +1,17 @@
+.consultingservices {
+    margin-top: 80px;
+}
+
+.consultingservices h2 {
+    color: #393950;
+    font-family: vije;
+    font-weight: bold;
+}
+
+.consultingservices p {
+    color: #707070;
+    padding-top: 10px;
+    text-align: justify;
+    font-family: VijeNeue-Light;
+    font-size: 1rem;
+}

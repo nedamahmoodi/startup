@@ -1,0 +1,49 @@
+.list {
+    margin-top: 80px;
+}
+.listitem {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #707070;
+    list-style-color: #0019ff;
+}
+.leftitem li {
+    margin-top: 20px;
+}
+
+.leftitem li::before {
+    content: "\2022";
+    color: blue;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-right: -1em;
+}
+.rightitem {
+    margin-right: 150px;
+}
+
+.rightitem li {
+    margin-top: 20px;
+}
+
+.rightitem li::before {
+    content: "\2022";
+    color: blue;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-right: -1em;
+}
+.list h2 {
+    color: #0019ff;
+    font-family: vije;
+    font-weight: bold;
+}
+
+.list p {
+    margin-top: 40px;
+    font-family: VijeNeue-Light;
+    font-size: 1rem;
+}
