@@ -14,6 +14,10 @@ import Startupadvice from "./Startupadvice";
 import NamiraStartupServices from "./NamiraStartupServices";
 import Startupsession from "./Startupsession";
 import Postacoment from "./Postacoment";
+import PicStartup from "./PicStartup";
+
+import { components } from "../data/land";
+
 function Test(props) {
   const type = "number";
   return (
@@ -22,41 +26,70 @@ function Test(props) {
         <div dir="rtl">
           <button className="btn1">تماس با ما</button>
         </div>
-
         <div className="logo"></div>
       </div>
-
-      <div className="pictop">
-        <img src={a} />
+      <div>
+        {components.map((component) => {
+          if (component.name === "image") {
+            return <PicStartup image={component.image} />;
+          }
+          if (component.name === "section") {
+            return (
+              <StartupConsulting
+                heading={component.heading}
+                btn={component.btn}
+                lorem={component.lorem}
+              />
+            );
+          }
+          if (component.name === "startupneed") {
+            return (
+              <Startupsneedadvice
+                image={component.image}
+                heading={component.heading}
+                paragraph={component.paragraphneed}
+                dir={component.dir}
+              />
+            );
+          }
+          if (component.name === "problemstartup") {
+            return (
+              <Problematic
+              key={component.name}
+                list={component.list}
+                heading={component.heading}
+                paragraph={component.paragraph}
+                wrap={component.wrap}
+              />
+            );
+          }
+           if (component.name === "namiraconsul") {
+             return (
+               <NamiraStartupServices
+                 list={component.list}
+                 heading={component.heading}
+               />
+             );
+           }
+           if (component.name === "reservstartup") {
+             return (
+               <Startupsession
+                 heading={component.heading}
+                 image={component.image}
+                 btn={component.btn}
+               />
+             );
+           }
+           if (component.name === "comentsend") {
+             return (
+               <Postacoment
+                 heading={component.heading}
+                 btn={component.btn}
+               />
+             );
+           }  
+        })}
       </div>
-      <StartupConsulting />
-      <Startupsneedadvice
-        heading={Strings.heading1}
-        text={Strings.lorem}
-        image={b}
-        dir="rtl"
-      />
-
-      <Problematic />
-
-      <div className="picdown">
-        <img src={a} />
-      </div>
-
-      <Consultingservices />
-      <Beststartupconsulting />
-
-      <Startupsneedadvice
-        heading={Strings.heading2}
-        text={Strings.lorem}
-        image={c}
-        dir="ltr"
-      />
-
-      <NamiraStartupServices />
-
-      <Startupsession />
-      <Postacoment />
     </div>
   );
 }

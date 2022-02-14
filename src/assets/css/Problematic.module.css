@@ -4,21 +4,27 @@
 .listitem {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    flex-wrap: wrap;
     color: #707070;
     list-style-color: #0019ff;
 }
-.leftitem li {
+.listitem li {
     margin-top: 20px;
+    width: 50%;
 }
 
-.leftitem li::before {
+.listitem li::before {
     content: "\2022";
     color: blue;
     font-weight: bold;
     display: inline-block;
     width: 1em;
     margin-right: -1em;
+}
+.listproblematic{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 .rightitem {
     margin-right: 150px;
@@ -46,4 +52,13 @@
     margin-top: 40px;
     font-family: VijeNeue-Light;
     font-size: 1rem;
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+
+.listitem {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
 }

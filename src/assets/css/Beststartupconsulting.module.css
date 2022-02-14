@@ -15,7 +15,7 @@
     justify-content: space-between;
 }
 
-.leftitem2 li::before {
+.listitem2 li::before {
     content: "\2022";
     color: #12f990;
     font-weight: bold;

@@ -4,17 +4,17 @@ import d from "../assets/image/imgteam.png";
 //Styles
 import styles from "../assets/css/Startupsession.module.css";
 
-const Startupsession = () => {
+const Startupsession = ({ heading, image, form, btn}) => {
   return (
     <div className="row">
       <div className={styles.Reservation} dir="rtl">
         <div className={styles.rightimg}>
-          <img className={styles.imgleft} src={d} />
+          <img className={styles.imgleft} src={image} />
         </div>
         <div className={styles.formleft}>
           <h2 style={{ fontFamily: "meshki" }}>
             {" "}
-            رزرو جلسه اختصاصی مشاوره استارتاپ به ص ورت حضوری در مشهد
+           {heading}
           </h2>
           <form>
             <input
@@ -28,7 +28,7 @@ const Startupsession = () => {
               placeholder="شماره همراه"
             ></input>
           </form>
-          <button className={styles.btnreservation}>تکمیل فرم رزرو جلسه</button>
+          <button className={styles.btnreservation}>{btn}</button>
         </div>
       </div>
     </div>
